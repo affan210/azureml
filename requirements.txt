@@ -1,4 +1,5 @@
 azureml-sdk
 azureml-widgets
 azureml-mlflow
+azure-ai-ml
 black
