@@ -1,0 +1,34 @@
+artifact_path: outputs/mlflow-model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.8.16
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: pickle
+    sklearn_version: 0.22.1
+mlflow_version: 2.1.1
+model_uuid: 2e89e21554b34cdc9b6d0757d0fd6161
+run_id: AutoML_8ccb5eb3-3685-4f90-a296-42445ae933f2_6
+signature:
+  inputs: '[{"name": "CustomerID", "type": "integer"}, {"name": "Customer_Name", "type":
+    "string"}, {"name": "Average_Daily_Balance", "type": "float"}, {"name": "Current_Balance_of_Customer",
+    "type": "float"}, {"name": "Due_Date_Payment", "type": "datetime"}, {"name": "Total_Purchase_Amount",
+    "type": "float"}, {"name": "Credit_Limit", "type": "float"}, {"name": "Credit_Limit_Date",
+    "type": "datetime"}, {"name": "Income_of_the_Customer", "type": "float"}, {"name":
+    "CurrentBankBranchId", "type": "integer"}, {"name": "CustomerMonthsOnBooks", "type":
+    "integer"}, {"name": "Starting_Date_of_Relationship", "type": "datetime"}, {"name":
+    "AGE", "type": "integer"}, {"name": "Email_Address", "type": "string"}, {"name":
+    "Phone", "type": "long"}, {"name": "MonthOfBirth_of_Customer", "type": "string"},
+    {"name": "YearOfBirth_of_Customer", "type": "integer"}, {"name": "Billing_Address_Line_1",
+    "type": "string"}, {"name": "Billing_City", "type": "string"}, {"name": "Billing_State",
+    "type": "string"}, {"name": "Billing_Country", "type": "string"}, {"name": "Billing_Zip",
+    "type": "integer"}, {"name": "CustomerScoreFlag", "type": "string"}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
+utc_time_created: '2023-03-21 08:22:24.017895'

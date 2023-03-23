@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "centralindia"
+    },
+    "workspaceName": {
+      "value": "ml-demo-explore"
+    },
+    "computeInstanceName": {
+      "value": "buf-batch-cluster"
+    },
+    "disableLocalAuth": {
+      "value": false
+    },
+    "maxNodeCount": {
+      "value": 1
+    },
+    "minNodeCount": {
+      "value": 0
+    },
+    "nodeIdleTimeBeforeScaleDown": {
+      "value": "PT120S"
+    },
+    "remoteLoginPortPublicAccess": {
+      "value": "Disabled"
+    },
+    "vmSize": {
+      "value": "Standard_D4ds_v4"
+    },
+    "vmPriority": {
+      "value": "LowPriority"
+    }
+  }
+}

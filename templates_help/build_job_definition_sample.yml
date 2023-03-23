@@ -1,0 +1,112 @@
+description: null
+tags:
+  model_explain_run: best_run
+  _aml_system_automl_run_workspace_id: 60cafd3f-2875-4dae-ab24-2a974dd71ddc
+  _aml_system_azureml.automlComponent: AutoML
+properties:
+  num_iterations: "1000"
+  training_type: TrainFull
+  acquisition_function: EI
+  primary_metric: r2_score
+  train_split: "0"
+  acquisition_parameter: "0"
+  num_cross_validation: null
+  target: affan-compute-cluster01
+  AMLSettingsJsonString: >-
+    {"enable_early_stopping":true,"enable_ensembling":true,"enable_stack_ensembling":true,"ensemble_iterations":15,"enable_onnx_compatible_models":false,"save_mlflow":true,"max_cores_per_iteration":-1,"send_telemetry":true,"blacklist_algos":["TensorFlowDNN","TensorFlowLinearRegressor"],"whitelist_models":null,"compute_target":"affan-compute-cluster01","enable_dnn":false,"enable_code_generation":true,"experiment_exit_score":null,"experiment_timeout_minutes":180,"featurization":{"_blocked_transformers":[],"_column_purposes":{"AGE":"Text","Phone":"Text","YearOfBirth_of_Customer":"Text","Billing_Zip":"Text"},"_transformer_params":{"Imputer":[]},"_drop_columns":["CustomerID","Customer_Name"]},"hyperdrive_config":null,"grain_column_names":null,"is_timeseries":false,"iteration_timeout_minutes":180,"max_concurrent_iterations":2,"metric_operation":"maximize","model_explainability":true,"n_cross_validations":null,"name":"exp-day2-no2","path":"./sample_projects/exp-day2-no2","primary_metric":"r2_score","region":"centralindia","resource_group":"rg-sbihackathon","subscription_id":"0f644ff4-434a-4446-a414-16ddb2b713ee","task_type":"regression","validation_size":null,"test_size":0.15,"vm_type":"STANDARD_DS3_V2","workspace_name":"ml-demo-explore","label_column_name":"CustomerScore","enable_batch_run":true,"dataset_id":"117aaefb-cf85-436d-a66f-9ba14ce81af0"}
+  DataPrepJsonString: >-
+    {\"datasets\":0,\"training_data\":{\"datasetId\":\"117aaefb-cf85-436d-a66f-9ba14ce81af0\"}}
+  EnableSubsampling: "False"
+  runTemplate: AutoML
+  azureml.runsource: automl
+  _aml_system_scenario_identification: Remote.Parent
+  ClientType: Browser
+  PlatformVersion: DPV1
+  environment_cpu_name: AzureML-AutoML
+  environment_cpu_label: prod
+  environment_gpu_name: AzureML-AutoML-GPU
+  environment_gpu_label: prod
+  root_attribution: automl
+  attribution: AutoML
+  Orchestrator: AutoML
+  CancelUri: >-
+    https://centralindia.api.azureml.ms/jasmine/v1.0/subscriptions/0f644ff4-434a-4446-a414-16ddb2b713ee/resourceGroups/rg-sbihackathon/providers/Microsoft.MachineLearningServices/workspaces/ml-demo-explore/experiment/exp-day2-no2/cancel/AutoML_8ccb5eb3-3685-4f90-a296-42445ae933f2
+displayName: silver_angle_mfsnmxjy
+status: NotStarted
+experimentName: exp-day2-no2
+services:
+  Tracking:
+    jobServiceType: Tracking
+    port: null
+    endpoint: >-
+      azureml://centralindia.api.azureml.ms/mlflow/v1.0/subscriptions/0f644ff4-434a-4446-a414-16ddb2b713ee/resourceGroups/rg-sbihackathon/providers/Microsoft.MachineLearningServices/workspaces/ml-demo-explore?
+    status: null
+    errorMessage: null
+    properties: null
+  Studio:
+    jobServiceType: Studio
+    port: null
+    endpoint: >-
+      https://ml.azure.com/runs/AutoML_8ccb5eb3-3685-4f90-a296-42445ae933f2?wsid=/subscriptions/0f644ff4-434a-4446-a414-16ddb2b713ee/resourcegroups/rg-sbihackathon/workspaces/ml-demo-explore
+    status: null
+    errorMessage: null
+    properties: null
+computeId: null
+isArchived: false
+schedule: null
+identity: null
+jobType: AutoML
+resources: null
+environmentId: null
+environmentVariables: null
+taskDetails:
+  logVerbosity: NotSet
+  limitSettings:
+    maxTrials: 1000
+    trialTimeout: PT3H
+    timeout: PT3H
+    maxConcurrentTrials: 2
+    maxCoresPerTrial: -1
+    exitScore: null
+    enableEarlyTermination: true
+  dataSettings:
+    targetColumnName: CustomerScore
+    trainingData:
+      data: null
+    testData:
+      data: null
+      testDataSize: null
+    weightColumnName: null
+    validationData:
+      data: null
+      validationDataSize: null
+      nCrossValidations: null
+      cvSplitColumnNames: null
+  featurizationSettings:
+    datasetLanguage: null
+    mode: Custom
+    blockedTransformers: []
+    columnNameAndTypes:
+      AGE: Text
+      Phone: Text
+      YearOfBirth_of_Customer: Text
+      Billing_Zip: Text
+    dropColumns:
+      - CustomerID
+      - Customer_Name
+    transformerParams:
+      Imputer: []
+    enableDnnFeaturization: false
+  trainingSettings:
+    enableOnnxCompatibleModels: false
+    stackEnsembleSettings: null
+    enableStackEnsemble: true
+    enableVoteEnsemble: true
+    ensembleModelDownloadTimeout: PT0S
+    enableModelExplainability: true
+    enableDnnTraining: false
+  taskType: Regression
+  primaryMetric: R2Score
+  allowedModels: null
+  blockedModels: null
+outputs: null

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "centralindia"
+    },
+    "workspaceName": {
+      "value": "ml-demo-explore"
+    },
+    "computeInstanceName": {
+      "value": "buf-batch-inference"
+    },
+    "vmSize": {
+      "value": "Standard_E2ads_v5"
+    },
+    "sshAccess": {
+      "value": "Disabled"
+    },
+    "disableLocalAuth": {
+      "value": true
+    },
+    "rootAccess": {
+      "value": false
+    },
+    "idleTimeBeforeShutdown": {
+      "value": "PT30M"
+    },
+    "schedules": {
+      "value": {
+        "computeStartStop": [
+          {
+            "action": "Stop",
+            "triggerType": "Cron",
+            "cron": {
+              "startTime": "2023-03-21T05:26:40",
+              "timeZone": "UTC",
+              "expression": "30 18 * * 1,2,3,4,5"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "runId": "AutoML_8ccb5eb3-3685-4f90-a296-42445ae933f2",
+  "runUuid": "6e630204-f4f8-4bf3-affb-15126f62f040",
+  "parentRunUuid": null,
+  "rootRunUuid": "6e630204-f4f8-4bf3-affb-15126f62f040",
+  "target": "affan-compute-cluster01",
+  "status": "Running",
+  "parentRunId": null,
+  "dataContainerId": "dcid.AutoML_8ccb5eb3-3685-4f90-a296-42445ae933f2",
+  "createdTimeUtc": "2023-03-21T08:13:18.0295352+00:00",
+  "startTimeUtc": "2023-03-21T08:13:32.941Z",
+  "endTimeUtc": null,
+  "error": null,
+  "warnings": null,
+  "tags": {
+    "model_explain_run": "best_run",
+    "_aml_system_automl_run_workspace_id": "60cafd3f-2875-4dae-ab24-2a974dd71ddc",
+    "_aml_system_azureml.automlComponent": "AutoML"
+  },
+  "properties": {
+    "num_iterations": "1000",
+    "training_type": "TrainFull",
+    "acquisition_function": "EI",
+    "primary_metric": "r2_score",
+    "train_split": "0",
+    "acquisition_parameter": "0",
+    "num_cross_validation": null,
+    "target": "affan-compute-cluster01",
+    "AMLSettingsJsonString": "{\"enable_early_stopping\":true,\"enable_ensembling\":true,\"enable_stack_ensembling\":true,\"ensemble_iterations\":15,\"enable_onnx_compatible_models\":false,\"save_mlflow\":true,\"max_cores_per_iteration\":-1,\"send_telemetry\":true,\"blacklist_algos\":[\"TensorFlowDNN\",\"TensorFlowLinearRegressor\"],\"whitelist_models\":null,\"compute_target\":\"affan-compute-cluster01\",\"enable_dnn\":false,\"enable_code_generation\":true,\"experiment_exit_score\":null,\"experiment_timeout_minutes\":180,\"featurization\":{\"_blocked_transformers\":[],\"_column_purposes\":{\"AGE\":\"Text\",\"Phone\":\"Text\",\"YearOfBirth_of_Customer\":\"Text\",\"Billing_Zip\":\"Text\"},\"_transformer_params\":{\"Imputer\":[]},\"_drop_columns\":[\"CustomerID\",\"Customer_Name\"]},\"hyperdrive_config\":null,\"grain_column_names\":null,\"is_timeseries\":false,\"iteration_timeout_minutes\":180,\"max_concurrent_iterations\":2,\"metric_operation\":\"maximize\",\"model_explainability\":true,\"n_cross_validations\":null,\"name\":\"exp-day2-no2\",\"path\":\"./sample_projects/exp-day2-no2\",\"primary_metric\":\"r2_score\",\"region\":\"centralindia\",\"resource_group\":\"rg-sbihackathon\",\"subscription_id\":\"0f644ff4-434a-4446-a414-16ddb2b713ee\",\"task_type\":\"regression\",\"validation_size\":null,\"test_size\":0.15,\"vm_type\":\"STANDARD_DS3_V2\",\"workspace_name\":\"ml-demo-explore\",\"label_column_name\":\"CustomerScore\",\"enable_batch_run\":true,\"dataset_id\":\"117aaefb-cf85-436d-a66f-9ba14ce81af0\"}",
+    "DataPrepJsonString": "{\\\"datasets\\\":0,\\\"training_data\\\":{\\\"datasetId\\\":\\\"117aaefb-cf85-436d-a66f-9ba14ce81af0\\\"}}",
+    "EnableSubsampling": "False",
+    "runTemplate": "AutoML",
+    "azureml.runsource": "automl",
+    "_aml_system_scenario_identification": "Remote.Parent",
+    "ClientType": "Browser",
+    "PlatformVersion": "DPV1",
+    "environment_cpu_name": "AzureML-AutoML",
+    "environment_cpu_label": "prod",
+    "environment_gpu_name": "AzureML-AutoML-GPU",
+    "environment_gpu_label": "prod",
+    "root_attribution": "automl",
+    "attribution": "AutoML",
+    "Orchestrator": "AutoML",
+    "CancelUri": "https://centralindia.api.azureml.ms/jasmine/v1.0/subscriptions/0f644ff4-434a-4446-a414-16ddb2b713ee/resourceGroups/rg-sbihackathon/providers/Microsoft.MachineLearningServices/workspaces/ml-demo-explore/experiment/exp-day2-no2/cancel/AutoML_8ccb5eb3-3685-4f90-a296-42445ae933f2",
+    "ClientSdkVersion": null,
+    "snapshotId": "00000000-0000-0000-0000-000000000000",
+    "SetupRunId": "AutoML_8ccb5eb3-3685-4f90-a296-42445ae933f2_setup",
+    "SetupRunContainerId": "dcid.AutoML_8ccb5eb3-3685-4f90-a296-42445ae933f2_setup",
+    "FeaturizationRunJsonPath": "featurizer_container.json",
+    "FeaturizationRunId": "AutoML_8ccb5eb3-3685-4f90-a296-42445ae933f2_featurize",
+    "ProblemInfoJsonString": "{\"dataset_num_categorical\": 0, \"is_sparse\": true, \"subsampling\": false, \"has_extra_col\": true, \"dataset_classes\": 3, \"dataset_features\": 105, \"dataset_samples\": 2845, \"single_frequency_class_detected\": false}"
+  },
+  "parameters": {},
+  "services": {},
+  "inputDatasets": [
+    {
+      "identifier": {
+        "savedId": "117aaefb-cf85-436d-a66f-9ba14ce81af0",
+        "registeredId": null,
+        "registeredVersion": null
+      },
+      "consumptionType": "RunInput",
+      "inputDetails": {
+        "inputName": "training_data",
+        "mechanism": "Direct",
+        "pathOnCompute": null
+      }
+    }
+  ],
+  "outputDatasets": [],
+  "runDefinition": null,
+  "logFiles": {},
+  "jobCost": {
+    "chargedCpuCoreSeconds": null,
+    "chargedCpuMemoryMegabyteSeconds": null,
+    "chargedGpuSeconds": null,
+    "chargedNodeUtilizationSeconds": null
+  },
+  "revision": 8,
+  "runTypeV2": {
+    "orchestrator": "AutoML",
+    "traits": ["automl", "Remote.Parent"],
+    "attribution": null,
+    "computeType": null
+  },
+  "settings": {},
+  "computeRequest": null,
+  "compute": null,
+  "createdBy": {
+    "userObjectId": "ff3cdeeb-954c-46f8-b639-eca7b0fa9d4c",
+    "userPuId": "1003200152997BA0",
+    "userIdp": null,
+    "userAltSecId": null,
+    "userIss": "https://sts.windows.net/7c0c36f5-af83-4c24-8844-9962e0163719/",
+    "userTenantId": "7c0c36f5-af83-4c24-8844-9962e0163719",
+    "userName": "Mohammad Affan",
+    "upn": "1000059312@hexaware.com"
+  },
+  "computeDuration": null,
+  "effectiveStartTimeUtc": "2023-03-21T08:13:32.9412768+00:00",
+  "runNumber": 1679386398,
+  "rootRunId": "AutoML_8ccb5eb3-3685-4f90-a296-42445ae933f2",
+  "userId": "ff3cdeeb-954c-46f8-b639-eca7b0fa9d4c",
+  "statusRevision": 2,
+  "currentComputeTime": "00:00:00",
+  "lastStartTimeUtc": "2023-03-21T08:13:32.9412768+00:00",
+  "lastModifiedBy": {
+    "userObjectId": "ff3cdeeb-954c-46f8-b639-eca7b0fa9d4c",
+    "userPuId": "1003200152997BA0",
+    "userIdp": null,
+    "userAltSecId": null,
+    "userIss": "https://sts.windows.net/7c0c36f5-af83-4c24-8844-9962e0163719/",
+    "userTenantId": "7c0c36f5-af83-4c24-8844-9962e0163719",
+    "userName": "Mohammad Affan",
+    "upn": "1000059312@hexaware.com"
+  },
+  "lastModifiedUtc": "2023-03-21T08:18:48.7366904+00:00",
+  "duration": null,
+  "inputs": null,
+  "outputs": null,
+  "currentAttemptId": 1
+}
